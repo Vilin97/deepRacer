@@ -1,0 +1,405 @@
+... logging to /root/.ros/log/c544a336-db34-11ec-8f49-26485fbd9377/roslaunch-ip-10-2-201-32.ec2.internal-137.log
+Checking log directory for disk usage. This may take a while.
+Press Ctrl-C to interrupt
+Done checking log file disk usage. Usage is <1GB.
+]2;/opt/amazon/install/deepracer_simulation_environment/share/deepracer_simulation_environment/launch/distributed_training.launch
+[1mstarted roslaunch server http://10.2.201.32:46017/[0m
+SUMMARY
+========
+PARAMETERS
+ * /rosdistro: melodic
+ * /rosversion: 1.14.13
+NODES
+  /
+    download_params_and_roslaunch_agent_node (deepracer_simulation_environment/download_params_and_roslaunch_agent.py)
+auto-starting new master
+[1mprocess[master]: started with pid [206][0m
+[1mROS_MASTER_URI=http://localhost:11311[0m
+]2;/opt/amazon/install/deepracer_simulation_environment/share/deepracer_simulation_environment/launch/distributed_training.launch http://localhost:11311
+[1msetting /run_id to c544a336-db34-11ec-8f49-26485fbd9377[0m
+[1mprocess[rosout-1]: started with pid [219][0m
+started core service [/rosout]
+[1mprocess[download_params_and_roslaunch_agent_node-2]: started with pid [224][0m
+Writing sim job pid ['137', '206', '224', '224'] to /opt/ml/simapp-job.pid
+[s3] Successfully downloaded yaml file from s3 key data-4babdd08-b561-461f-b89b-0e59c2153d10/models/f4861372-93fe-4ec3-8f43-b845859cdbbf/sagemaker-robomaker-artifacts/training_params_39cce469-be1f-4844-b424-e30ba8eb6f99.yaml to local ./custom_files/training_params_39cce469-be1f-4844-b424-e30ba8eb6f99.yaml.
+{'METRICS_S3_BUCKET': ['aws-deepracer-data-us-east-1-1'], 'METRICS_S3_OBJECT_KEY': ['data-4babdd08-b561-461f-b89b-0e59c2153d10/models/f4861372-93fe-4ec3-8f43-b845859cdbbf/metrics/training/training-20220524073455-gAfF6B0PQ02JVhssAP_xHA.json'], 'SIMTRACE_S3_PREFIX': 'data-4babdd08-b561-461f-b89b-0e59c2153d10/models/f4861372-93fe-4ec3-8f43-b845859cdbbf/sim-trace/training', 'SAGEMAKER_SHARED_S3_BUCKET': ['aws-deepracer-data-us-east-1-1'], 'JOB_TYPE': 'TRAINING', 'METRIC_NAMESPACE': 'AWSDeepRacer', 'TARGET_REWARD_SCORE': 'None', 'RACE_TYPE': 'TIME_TRIAL', 'WORLD_NAME': 'reinvent_base', 'MP4_S3_OBJECT_PREFIX': 'data-4babdd08-b561-461f-b89b-0e59c2153d10/models/f4861372-93fe-4ec3-8f43-b845859cdbbf/videos/training/training-20220524073455-gAfF6B0PQ02JVhssAP_xHA', 'ROBOMAKER_SIMULATION_JOB_ACCOUNT_ID': '372026249783', 'TRAINING_JOB_ARN': 'arn:aws:deepracer:us-east-1:177975684211:training_job/gAfF6B0PQ02JVhssAP_xHA', 'ALTERNATE_DRIVING_DIRECTION': 'false', 'MODEL_METADATA_FILE_S3_KEY': ['data-4babdd08-b561-461f-b89b-0e59c2153d10/models/f4861372-93fe-4ec3-8f43-b845859cdbbf/model_metadata.json'], 'REWARD_FILE_S3_KEY': 'data-4babdd08-b561-461f-b89b-0e59c2153d10/models/f4861372-93fe-4ec3-8f43-b845859cdbbf/reward_function.py', 'METRIC_NAME': 'TrainingRewardScore', 'S3_KMS_CMK_ARN': 'arn:aws:kms:us-east-1:372026249783:key/646af979-76f8-4406-9085-95e05fdc5d6b', 'MP4_S3_BUCKET': 'aws-deepracer-data-us-east-1-1', 'AWS_REGION': 'us-east-1', 'SIMTRACE_S3_BUCKET': 'aws-deepracer-data-us-east-1-1', 'BODY_SHELL_TYPE': ['deepracer'], 'KINESIS_VIDEO_STREAM_NAME': 'dr-kvs-372026249783-20220524073455-02fb11a4-b977-4793-9e71-a6f2a9bcba80', 'SAGEMAKER_SHARED_S3_PREFIX': ['data-4babdd08-b561-461f-b89b-0e59c2153d10/models/f4861372-93fe-4ec3-8f43-b845859cdbbf/sagemaker-robomaker-artifacts'], 'CHANGE_START_POSITION': 'true', 'CAR_COLOR': ['Black'], 'NUMBER_OF_EPISODES': '0'}
+[s3] Successfully downloaded model metadata                  from s3 key data-4babdd08-b561-461f-b89b-0e59c2153d10/models/f4861372-93fe-4ec3-8f43-b845859cdbbf/model_metadata.json to local ./custom_files/racecar/model_metadata.json.
+Sensor list [u'FRONT_FACING_CAMERA'], network DEEP_CONVOLUTIONAL_NETWORK_SHALLOW, simapp_version 4.0, training_algorithm sac, action_space_type continuous lidar_config {'num_values_per_sector': 8, 'clipping_dist': 2.0, 'num_sectors': 8}
+... logging to /root/.ros/log/c544a336-db34-11ec-8f49-26485fbd9377/roslaunch-ip-10-2-201-32.ec2.internal-256.log
+Checking log directory for disk usage. This may take a while.
+Press Ctrl-C to interrupt
+Done checking log file disk usage. Usage is <1GB.
+]2;/opt/amazon/install/deepracer_simulation_environment/share/deepracer_simulation_environment/launch/rollout_rl_agent.launch
+xacro: in-order processing became default in ROS Melodic. You can drop the option.
+[1mstarted roslaunch server http://10.2.201.32:34167/[0m
+SUMMARY
+========
+PARAMETERS
+ * /ALTERNATE_DRIVING_DIRECTION: false
+ * /AWS_REGION: us-east-1
+ * /BODY_SHELL_TYPE: ['deepracer']
+ * /CHANGE_START_POSITION: true
+ * /JOB_TYPE: TRAINING
+ * /KINESIS_VIDEO_STREAM_NAME: dr-kvs-3720262497...
+ * /METRICS_S3_BUCKET: aws-deepracer-dat...
+ * /METRICS_S3_OBJECT_KEY: data-4babdd08-b56...
+ * /METRIC_NAME: TrainingRewardScore
+ * /METRIC_NAMESPACE: AWSDeepRacer
+ * /MODEL_METADATA_FILE_S3_KEY: data-4babdd08-b56...
+ * /MP4_S3_BUCKET: aws-deepracer-dat...
+ * /MP4_S3_OBJECT_PREFIX: data-4babdd08-b56...
+ * /NUMBER_OF_EPISODES: 0
+ * /RACE_TYPE: TIME_TRIAL
+ * /REWARD_FILE_S3_KEY: data-4babdd08-b56...
+ * /ROBOMAKER_SIMULATION_JOB_ACCOUNT_ID: 372026249783
+ * /S3_KMS_CMK_ARN: arn:aws:kms:us-ea...
+ * /SAGEMAKER_SHARED_S3_BUCKET: aws-deepracer-dat...
+ * /SAGEMAKER_SHARED_S3_PREFIX: data-4babdd08-b56...
+ * /SIMTRACE_S3_BUCKET: aws-deepracer-dat...
+ * /SIMTRACE_S3_PREFIX: data-4babdd08-b56...
+ * /TARGET_REWARD_SCORE: None
+ * /TRAINING_JOB_ARN: arn:aws:deepracer...
+ * /WORLD_NAME: reinvent_base
+ * /racecar/h264_video_encoder/bitrate: 2048000
+ * /racecar/h264_video_encoder/fps_denominator: 1
+ * /racecar/h264_video_encoder/fps_numerator: 15
+ * /racecar/h264_video_encoder/image_transport: raw
+ * /racecar/h264_video_encoder/publication_topic: /racecar/b9/kvs/v...
+ * /racecar/h264_video_encoder/subscription_topic: /racecar/deeprace...
+ * /racecar/joint_state_controller/publish_rate: 60
+ * /racecar/joint_state_controller/type: joint_state_contr...
+ * /racecar/kinesis_video_streamer/aws_client_configuration/connect_timeout_ms: 9000
+ * /racecar/kinesis_video_streamer/aws_client_configuration/max_retries: 10
+ * /racecar/kinesis_video_streamer/aws_client_configuration/region: us-east-1
+ * /racecar/kinesis_video_streamer/aws_client_configuration/request_timeout_ms: 9000
+ * /racecar/kinesis_video_streamer/kinesis_video/log4cplus_config: /opt/amazon/insta...
+ * /racecar/kinesis_video_streamer/kinesis_video/stream0/frame_rate: 30
+ * /racecar/kinesis_video_streamer/kinesis_video/stream0/frame_timecodes: False
+ * /racecar/kinesis_video_streamer/kinesis_video/stream0/key_frame_fragmentation: False
+ * /racecar/kinesis_video_streamer/kinesis_video/stream0/stream_name: dr-kvs-3720262497...
+ * /racecar/kinesis_video_streamer/kinesis_video/stream0/subscription_topic: /racecar/b9/kvs/v...
+ * /racecar/kinesis_video_streamer/kinesis_video/stream0/topic_type: 1
+ * /racecar/kinesis_video_streamer/kinesis_video/stream_count: 1
+ * /racecar/left_front_wheel_velocity_controller/joint: left_front_wheel_...
+ * /racecar/left_front_wheel_velocity_controller/pid/d: 0.0
+ * /racecar/left_front_wheel_velocity_controller/pid/i: 0.0
+ * /racecar/left_front_wheel_velocity_controller/pid/i_clamp: 0.0
+ * /racecar/left_front_wheel_velocity_controller/pid/p: 0.5
+ * /racecar/left_front_wheel_velocity_controller/type: effort_controller...
+ * /racecar/left_rear_wheel_velocity_controller/joint: left_rear_wheel_j...
+ * /racecar/left_rear_wheel_velocity_controller/pid/d: 0.0
+ * /racecar/left_rear_wheel_velocity_controller/pid/i: 0.0
+ * /racecar/left_rear_wheel_velocity_controller/pid/i_clamp: 0.0
+ * /racecar/left_rear_wheel_velocity_controller/pid/p: 1.0
+ * /racecar/left_rear_wheel_velocity_controller/type: effort_controller...
+ * /racecar/left_steering_hinge_position_controller/joint: left_steering_hin...
+ * /racecar/left_steering_hinge_position_controller/pid/d: 0.5
+ * /racecar/left_steering_hinge_position_controller/pid/i: 0.0
+ * /racecar/left_steering_hinge_position_controller/pid/p: 1.0
+ * /racecar/left_steering_hinge_position_controller/type: effort_controller...
+ * /racecar/right_front_wheel_velocity_controller/joint: right_front_wheel...
+ * /racecar/right_front_wheel_velocity_controller/pid/d: 0.0
+ * /racecar/right_front_wheel_velocity_controller/pid/i: 0.0
+ * /racecar/right_front_wheel_velocity_controller/pid/i_clamp: 0.0
+ * /racecar/right_front_wheel_velocity_controller/pid/p: 0.5
+ * /racecar/right_front_wheel_velocity_controller/type: effort_controller...
+ * /racecar/right_rear_wheel_velocity_controller/joint: right_rear_wheel_...
+ * /racecar/right_rear_wheel_velocity_controller/pid/d: 0.0
+ * /racecar/right_rear_wheel_velocity_controller/pid/i: 0.0
+ * /racecar/right_rear_wheel_velocity_controller/pid/i_clamp: 0.0
+ * /racecar/right_rear_wheel_velocity_controller/pid/p: 1.0
+ * /racecar/right_rear_wheel_velocity_controller/type: effort_controller...
+ * /racecar/right_steering_hinge_position_controller/joint: right_steering_hi...
+ * /racecar/right_steering_hinge_position_controller/pid/d: 0.5
+ * /racecar/right_steering_hinge_position_controller/pid/i: 0.0
+ * /racecar/right_steering_hinge_position_controller/pid/p: 1.0
+ * /racecar/right_steering_hinge_position_controller/type: effort_controller...
+ * /racecar/robot_description: <?xml version="1....
+ * /rosdistro: melodic
+ * /rosversion: 1.14.13
+ * /use_sim_time: True
+NODES
+  /
+    agent (deepracer_simulation_environment/run_rollout_rl_agent.sh)
+    agents_video_editor (deepracer_simulation_environment/agents_video_editor.py)
+    car_reset_node (deepracer_simulation_environment/car_node.py)
+    gazebo (gazebo_ros/gzserver)
+  /racecar/
+    controller_manager (controller_manager/spawner)
+    h264_video_encoder (h264_video_encoder/h264_video_encoder)
+    kinesis_video_streamer (kinesis_video_streamer/kinesis_video_streamer)
+    racecar_spawn (gazebo_ros/spawn_model)
+    robot_state_publisher (robot_state_publisher/robot_state_publisher)
+[1mROS_MASTER_URI=http://localhost:11311[0m
+]2;/opt/amazon/install/deepracer_simulation_environment/share/deepracer_simulation_environment/launch/rollout_rl_agent.launch http://localhost:11311
+[1mprocess[racecar/racecar_spawn-1]: started with pid [278][0m
+[1mprocess[racecar/controller_manager-2]: started with pid [279][0m
+[1mprocess[racecar/robot_state_publisher-3]: started with pid [280][0m
+[1mprocess[racecar/h264_video_encoder-4]: started with pid [281][0m
+[1mprocess[racecar/kinesis_video_streamer-5]: started with pid [282][0m
+[1mprocess[gazebo-6]: started with pid [319][0m
+[33m[ WARN] [1653378026.280143121]: [ClientConfiguration] Retry Strategy will use the default max attempts.[0m
+[33m[ WARN] [1653378026.280260352]: [ClientConfiguration] Retry Strategy will use the default max attempts.[0m
+[1mprocess[car_reset_node-7]: started with pid [324][0m
+[33m[ WARN] [1653378026.307166257]: [STSAssumeRoleWithWebIdentityCredentialsProvider] Token file must be specified to use STS AssumeRole web identity creds provider.[0m
+[33m[ WARN] [1653378026.307210295]: [ClientConfiguration] Retry Strategy will use the default max attempts.[0m
+[31m[ERROR] [1653378026.307408128]: [ProcessCredentialsProvider] Failed to find credential process's profile: default[0m
+[33m[ WARN] [1653378026.308961488]: [STSAssumeRoleWithWebIdentityCredentialsProvider] Token file must be specified to use STS AssumeRole web identity creds provider.[0m
+[33m[ WARN] [1653378026.309000823]: [ClientConfiguration] Retry Strategy will use the default max attempts.[0m
+[31m[ERROR] [1653378026.309356273]: [ProcessCredentialsProvider] Failed to find credential process's profile: default[0m
+[1mprocess[agents_video_editor-8]: started with pid [416][0m
+[1mprocess[agent-9]: started with pid [515][0m
++ export PYTHONUNBUFFERED=1
++ PYTHONUNBUFFERED=1
++ ROLLOUT_IDX=0
++ python3 -m markov.rollout_worker --rollout_idx 0
+[INFO] [1653378026.435169, 0.000000]: Controller Spawner: Waiting for service controller_manager/load_controller
+[31m[ERROR] [1653378026.454630699]: [ProcessCredentialsProvider] Failed to find credential process's profile: default[0m
+[INFO] [1653378027.046124, 0.000000]: Loading model XML from ros parameter /racecar/robot_description
+[INFO] [1653378027.052694, 0.000000]: Waiting for service /gazebo/spawn_urdf_model
+Publishing to KVS stream is enabled: True
+[INFO] [1653378027.657532, 0.000000]: Calling service /gazebo/spawn_urdf_model
+[INFO] [1653378027.747090, 0.000000]: Spawn status: SpawnModel: Successfully spawned entity
+[CameraManager]: Added <markov.cameras.handlers.follow_car_camera.FollowCarCamera object at 0x7fcf2b435710> to camera_namespaces racecar
+[CameraManager]: Added <markov.cameras.handlers.top_camera.TopCamera object at 0x7fcf2b4354d0> to camera_namespaces racecar
+[CameraManager]: Removed <markov.cameras.handlers.follow_car_camera.FollowCarCamera object at 0x7fcf2b435710> from camera_namespaces racecar
+[CameraManager]: Removed <markov.cameras.handlers.top_camera.TopCamera object at 0x7fcf2b4354d0> from camera_namespaces racecar
+[1m[racecar/racecar_spawn-1] process has finished cleanly
+log file: /root/.ros/log/c544a336-db34-11ec-8f49-26485fbd9377/racecar-racecar_spawn-1*.log[0m
+[INFO] [1653378028.554233, 0.106000]: Controller Spawner: Waiting for service controller_manager/switch_controller
+[INFO] [1653378028.556277, 0.108000]: Controller Spawner: Waiting for service controller_manager/unload_controller
+[INFO] [1653378028.559020, 0.111000]: Loading controller: left_rear_wheel_velocity_controller
+[INFO] [1653378028.613158, 0.164000]: Loading controller: right_rear_wheel_velocity_controller
+[INFO] [1653378028.658591, 0.209000]: Loading controller: left_front_wheel_velocity_controller
+[INFO] [1653378028.706764, 0.257000]: Loading controller: right_front_wheel_velocity_controller
+[INFO] [1653378028.758512, 0.308000]: Loading controller: left_steering_hinge_position_controller
+[INFO] [1653378028.807649, 0.357000]: Loading controller: right_steering_hinge_position_controller
+[INFO] [1653378028.855838, 0.405000]: Loading controller: joint_state_controller
+[INFO] [1653378028.866816, 0.416000]: Controller Spawner: Loaded controllers: left_rear_wheel_velocity_controller, right_rear_wheel_velocity_controller, left_front_wheel_velocity_controller, right_front_wheel_velocity_controller, left_steering_hinge_position_controller, right_steering_hinge_position_controller, joint_state_controller
+[INFO] [1653378028.870715, 0.420000]: Started controllers: left_rear_wheel_velocity_controller, right_rear_wheel_velocity_controller, left_front_wheel_velocity_controller, right_front_wheel_velocity_controller, left_steering_hinge_position_controller, right_steering_hinge_position_controller, joint_state_controller
+Pausing physics after initializing the cars
+[0m[ INFO] [1653378026.977311892]: DeepRacerGazeboSystemPlugin: Load[0m
+[0m[ INFO] [1653378026.979808428]: DeepRacerGazeboSystemPlugin: Finished loading.[0m
+[0m[ INFO] [1653378026.991011005]: Finished loading Gazebo ROS API Plugin.[0m
+[0m[ INFO] [1653378026.992759311]: waitForService: Service [/gazebo/set_physics_properties] has not been advertised, waiting...[0m
+[0m[ INFO] [1653378027.635871885]: DeepRacerGazeboSystemPlugin: Init Complete[0m
+[0m[ INFO] [1653378027.656337886]: waitForService: Service [/gazebo/set_physics_properties] is now available.[0m
+[0m[ INFO] [1653378027.758805302, 0.001000000]: Physics dynamic reconfigure ready.[0m
+[0m[ INFO] [1653378028.250984946, 0.001000000]: Camera Plugin: Using the 'robotNamespace' param: '/racecar/'[0m
+[0m[ INFO] [1653378028.253603016, 0.001000000]: Camera Plugin (ns = /racecar/)  <tf_prefix_>, set to "/racecar"[0m
+[0m[ INFO] [1653378028.315889178, 0.001000000]: Loading gazebo_ros_control plugin[0m
+[0m[ INFO] [1653378028.315971377, 0.001000000]: Starting gazebo_ros_control plugin in namespace: /racecar[0m
+[0m[ INFO] [1653378028.316937422, 0.001000000]: gazebo_ros_control plugin is waiting for model URDF in parameter [/racecar/robot_description] on the ROS param server.[0m
+[0m[ INFO] [1653378028.445643758, 0.001000000]: Loaded gazebo_ros_control.[0m
+Topic [reinvent_base//racecar/main_camera/camera_link/camera_sensor/image] is not valid.
+Spawning sub camera model
+[0m[ INFO] [1653378029.075514337, 0.533000000]: Camera Plugin: Using the 'robotNamespace' param: '/racecar/main_camera'[0m
+[0m[ INFO] [1653378029.077670677, 0.533000000]: Camera Plugin (ns = /racecar/main_camera)  <tf_prefix_>, set to "/racecar/main_camera"[0m
+[1;33mWarning [parser.cc:950][0m XML Element[projection_type], child of element[camera] not defined in SDF. Ignoring[projection_type]. You may have an incorrect SDF file, or an sdformat version that doesn't support this element.
+Topic [reinvent_base//sub_camera/camera_link/camera_sensor/image] is not valid.
+/usr/lib/python3/dist-packages/requests/__init__.py:80: RequestsDependencyWarning: urllib3 (1.26.9) or chardet (3.0.4) doesn't match a supported version!
+  RequestsDependencyWarning)
+S3 bucket: aws-deepracer-data-us-east-1-1
+S3 prefix: data-4babdd08-b561-461f-b89b-0e59c2153d10/models/f4861372-93fe-4ec3-8f43-b845859cdbbf/sagemaker-robomaker-artifacts
+[s3] Successfully downloaded reward function from s3 key data-4babdd08-b561-461f-b89b-0e59c2153d10/models/f4861372-93fe-4ec3-8f43-b845859cdbbf/reward_function.py to local                  ./custom_files/agent/customer_reward_function.py.
+Succeed to import user's reward function
+[CameraManager]: Added <markov.cameras.handlers.follow_car_camera.FollowCarCamera object at 0x7f1afdd725c0> to camera_namespaces racecar
+[CameraManager]: Added <markov.cameras.handlers.top_camera.TopCamera object at 0x7f1b197986d8> to camera_namespaces racecar
+[s3] Successfully downloaded model metadata                  from s3 key data-4babdd08-b561-461f-b89b-0e59c2153d10/models/f4861372-93fe-4ec3-8f43-b845859cdbbf/model_metadata.json to local ./custom_files/agent/model_metadata.json.
+Sensor list ['FRONT_FACING_CAMERA'], network DEEP_CONVOLUTIONAL_NETWORK_SHALLOW, simapp_version 4.0, training_algorithm sac, action_space_type continuous lidar_config {'num_sectors': 8, 'num_values_per_sector': 8, 'clipping_dist': 2.0}
+Action space from file: {'steering_angle': {'high': 20, 'low': -20}, 'speed': {'high': 2, 'low': 0.5}}
+[s3] Successfully downloaded ip config from                  s3 key data-4babdd08-b561-461f-b89b-0e59c2153d10/models/f4861372-93fe-4ec3-8f43-b845859cdbbf/sagemaker-robomaker-artifacts/ip/ip.json to local ./custom_files/ip.json.
+[s3] Successfully downloaded hyperparameters from                      s3 key data-4babdd08-b561-461f-b89b-0e59c2153d10/models/f4861372-93fe-4ec3-8f43-b845859cdbbf/sagemaker-robomaker-artifacts/ip/hyperparameters.json to local ./custom_files/agent/hyperparameters.json.
+Using the following hyper-parameters
+{
+  "batch_size": 32,
+  "discount_factor": 0.999,
+  "e_greedy_value": 0.05,
+  "epsilon_steps": 10000,
+  "exploration_type": "additive_noise",
+  "loss_type": "mean squared error",
+  "lr": 0.0005,
+  "num_episodes_between_training": 1,
+  "sac_alpha": 0.1,
+  "stack_size": 1,
+  "term_cond_avg_score": 100000.0,
+  "term_cond_max_episodes": 100000
+}
+s3 failed, retry after 1.3264238342278847 seconds. Re-try count: 1/5: An error occurred (404) when calling the HeadObject operation: Not Found
+[h264_omx @ 0x558474bc8040] libOMX_Core.so not found
+[h264_omx @ 0x558474bc8040] libOmxCore.so not found
+[31m[ERROR] [1653378031.704126466, 0.533000000]: [open_codec] Could not open codec[0m
+[libx264 @ 0x558474bc9600] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2 AVX512
+[libx264 @ 0x558474bc9600] profile High, level 2.2
+[libx264 @ 0x558474bc9600] 264 - core 152 r2854 e9a5903 - H.264/MPEG-4 AVC codec - Copyleft 2003-2017 - http://www.videolan.org/x264.html - options: cabac=1 ref=1 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=2 psy=1 psy_rd=1.00:0.00 mixed_ref=0 me_range=16 chroma_me=1 trellis=0 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=0 threads=7 lookahead_threads=7 sliced_threads=1 slices=7 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=0 weightp=1 keyint=15 keyint_min=8 scenecut=40 intra_refresh=0 rc=abr mbtree=0 bitrate=2048 ratetol=1.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+[31m[ERROR] [1653378032.058648510, 0.533000000]: [ProcessCredentialsProvider] Failed to find credential process's profile: default[0m
+[33m[ WARN] [1653378032.069590602, 0.533000000]: [KinesisVideoFrameTransportCallback] dr-kvs-372026249783-20220524073455-02fb11a4-b977-4793-9e71-a6f2a9bcba80 PutFrame failed. Error code: 4102[0m
+[33m[ WARN] [1653378032.069704825, 0.533000000]: [KinesisVideoFrameTransportCallback] dr-kvs-372026249783-20220524073455-02fb11a4-b977-4793-9e71-a6f2a9bcba80 PutFrame failed. Error code: 4102[0m
+[33m[ WARN] [1653378032.069891276, 0.533000000]: [KinesisVideoFrameTransportCallback] dr-kvs-372026249783-20220524073455-02fb11a4-b977-4793-9e71-a6f2a9bcba80 PutFrame failed. Error code: 4102[0m
+[33m[ WARN] [1653378032.070035967, 0.533000000]: [KinesisVideoFrameTransportCallback] dr-kvs-372026249783-20220524073455-02fb11a4-b977-4793-9e71-a6f2a9bcba80 PutFrame failed. Error code: 4102[0m
+[33m[ WARN] [1653378032.070123549, 0.533000000]: [KinesisVideoFrameTransportCallback] dr-kvs-372026249783-20220524073455-02fb11a4-b977-4793-9e71-a6f2a9bcba80 PutFrame failed. Error code: 4102[0m
+[33m[ WARN] [1653378032.091517250, 0.533000000]: [KinesisVideoFrameTransportCallback] dr-kvs-372026249783-20220524073455-02fb11a4-b977-4793-9e71-a6f2a9bcba80 PutFrame failed. Error code: 4102[0m
+s3 failed, retry after 4.343054342494151 seconds. Re-try count: 2/5: An error occurred (404) when calling the HeadObject operation: Not Found
+[33m[ WARN] [1653378036.698411034, 0.533000000]: [KinesisVideoFrameTransportCallback] dr-kvs-372026249783-20220524073455-02fb11a4-b977-4793-9e71-a6f2a9bcba80 PutFrame failed. Error code: 4102[0m
+s3 failed, retry after 9.908970039537882 seconds. Re-try count: 3/5: An error occurred (404) when calling the HeadObject operation: Not Found
+s3 failed, retry after 16.09450474778879 seconds. Re-try count: 4/5: An error occurred (404) when calling the HeadObject operation: Not Found
+[s3] Successfully downloaded 1_Step-0.ckpt.data-00000-of-00001 from                  s3 key data-4babdd08-b561-461f-b89b-0e59c2153d10/models/f4861372-93fe-4ec3-8f43-b845859cdbbf/sagemaker-robomaker-artifacts/model/1_Step-0.ckpt.data-00000-of-00001 to local checkpoint_robomaker/agent/1_Step-0.ckpt.data-00000-of-00001.
+[s3] Successfully downloaded 1_Step-0.ckpt.index from                  s3 key data-4babdd08-b561-461f-b89b-0e59c2153d10/models/f4861372-93fe-4ec3-8f43-b845859cdbbf/sagemaker-robomaker-artifacts/model/1_Step-0.ckpt.index to local checkpoint_robomaker/agent/1_Step-0.ckpt.index.
+[s3] Successfully downloaded 1_Step-0.ckpt.meta from                  s3 key data-4babdd08-b561-461f-b89b-0e59c2153d10/models/f4861372-93fe-4ec3-8f43-b845859cdbbf/sagemaker-robomaker-artifacts/model/1_Step-0.ckpt.meta to local checkpoint_robomaker/agent/1_Step-0.ckpt.meta.
+[s3] Successfully downloaded .ready from                  s3 key data-4babdd08-b561-461f-b89b-0e59c2153d10/models/f4861372-93fe-4ec3-8f43-b845859cdbbf/sagemaker-robomaker-artifacts/model/.ready to local checkpoint_robomaker/agent/.ready.
+[s3] Successfully downloaded .ready from                  s3 key data-4babdd08-b561-461f-b89b-0e59c2153d10/models/f4861372-93fe-4ec3-8f43-b845859cdbbf/sagemaker-robomaker-artifacts/model/.ready to local checkpoint_robomaker/agent/.ready.
+## Creating graph - name: MultiAgentGraphManager
+## Start physics before creating graph
+## Create graph
+## Creating agent - name: agent
+[RL] Created agent loggers
+[RL] Dynamic import of memory:  "DeepRacerMemoryParameters" {
+    "load_memory_from_file_path": null,
+    "max_size": [
+        "<MemoryGranularity.Transitions: 0>",
+        1000000
+    ],
+    "n_step": -1,
+    "shared_memory": false,
+    "train_to_eval_ratio": 1
+}
+[RL] Dynamically imported of memory <markov.memories.deepracer_memory.DeepRacerMemory object at 0x7f1add386da0>
+[RL] Setting devices
+[RL] Setting filters
+[RL] Setting filter devices: numpy
+[RL] Setting Phase
+[RL] After setting Phase
+[RL] Setting signals
+[RL] Agent init successful
+## Created agent: agent
+WARNING:tensorflow:From /opt/amazon/install/sagemaker_rl_agent/lib/python3.6/site-packages/markov/multi_agent_coach/architectures/tensorflow_components/heads/sac_head.py:65: MultivariateNormalDiag.__init__ (from tensorflow.contrib.distributions.python.ops.mvn_diag) is deprecated and will be removed after 2018-10-01.
+Instructions for updating:
+The TensorFlow Distributions library has moved to TensorFlow Probability (https://github.com/tensorflow/probability). You should update all references to use `tfp.distributions` instead of `tf.contrib.distributions`.
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/tensorflow/contrib/distributions/python/ops/mvn_diag.py:223: MultivariateNormalLinearOperator.__init__ (from tensorflow.contrib.distributions.python.ops.mvn_linear_operator) is deprecated and will be removed after 2018-10-01.
+Instructions for updating:
+The TensorFlow Distributions library has moved to TensorFlow Probability (https://github.com/tensorflow/probability). You should update all references to use `tfp.distributions` instead of `tf.contrib.distributions`.
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/tensorflow/contrib/distributions/python/ops/mvn_linear_operator.py:200: AffineLinearOperator.__init__ (from tensorflow.contrib.distributions.python.ops.bijectors.affine_linear_operator) is deprecated and will be removed after 2018-10-01.
+Instructions for updating:
+The TensorFlow Distributions library has moved to TensorFlow Probability (https://github.com/tensorflow/probability). You should update all references to use `tfp.distributions` instead of `tf.contrib.distributions`.
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/tensorflow/contrib/distributions/python/ops/bijectors/affine_linear_operator.py:158: _DistributionShape.__init__ (from tensorflow.contrib.distributions.python.ops.shape) is deprecated and will be removed after 2018-10-01.
+Instructions for updating:
+The TensorFlow Distributions library has moved to TensorFlow Probability (https://github.com/tensorflow/probability). You should update all references to use `tfp.distributions` instead of `tf.contrib.distributions`.
+Network: policy, Copies: 1 (online network)
+-------------------------------------------
+Input Embedder: FRONT_FACING_CAMERA
+	Input size = [120, 160, 1]
+	Input Normalization (scale = 255.0, offset = 0.0)
+	Convolution (num filters = 32, kernel size = 8, stride = 4)
+	Activation (type = <function relu at 0x7f1b04ad9730>)
+	Convolution (num filters = 64, kernel size = 4, stride = 2)
+	Activation (type = <function relu at 0x7f1b04ad9730>)
+	Convolution (num filters = 64, kernel size = 3, stride = 1)
+	Activation (type = <function relu at 0x7f1b04ad9730>)
+Middleware:
+	Dense (num outputs = 512)
+	Activation (type = <function relu at 0x7f1b04ad9730>)
+Output Head: sac_policy_head
+	policy head:		Dense (num outputs = 256)
+			Dense (num outputs = 256)
+			Dense (num outputs = [4])
+	policy_mu = output[:num_actions], policy_std = output[num_actions:]
+Network: q, Copies: 1 (online network)
+--------------------------------------
+Input Embedder: FRONT_FACING_CAMERA
+	Input size = [120, 160, 1]
+	Input Normalization (scale = 255.0, offset = 0.0)
+	Convolution (num filters = 32, kernel size = 8, stride = 4)
+	Activation (type = <function relu at 0x7f1b04ad9730>)
+	Convolution (num filters = 64, kernel size = 4, stride = 2)
+	Activation (type = <function relu at 0x7f1b04ad9730>)
+	Convolution (num filters = 64, kernel size = 3, stride = 1)
+	Activation (type = <function relu at 0x7f1b04ad9730>)
+Middleware:
+	No layers
+Output Head: q_values_head
+	q1 output		Dense (num outputs = 256)
+			Dense (num outputs = 256)
+			Dense (num outputs = 1)
+	q2 output		Dense (num outputs = 256)
+			Dense (num outputs = 256)
+			Dense (num outputs = 1)
+	min(Q1,Q2)
+Network: v, Copies: 2 (online network | target network)
+-------------------------------------------------------
+Input Embedder: FRONT_FACING_CAMERA
+	Input size = [120, 160, 1]
+	Input Normalization (scale = 255.0, offset = 0.0)
+	Convolution (num filters = 32, kernel size = 8, stride = 4)
+	Activation (type = <function relu at 0x7f1b04ad9730>)
+	Convolution (num filters = 64, kernel size = 4, stride = 2)
+	Activation (type = <function relu at 0x7f1b04ad9730>)
+	Convolution (num filters = 64, kernel size = 3, stride = 1)
+	Activation (type = <function relu at 0x7f1b04ad9730>)
+Middleware:
+	Dense (num outputs = 512)
+	Activation (type = <function relu at 0x7f1b04ad9730>)
+Output Head: v_values_head
+	Dense (num outputs = 1)
+## Stop physics after creating graph
+## Creating session
+2022-05-24 07:41:34.374723: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 AVX512F FMA
+[33m[ WARN] [1653378098.777447105, 29.905000000]: [KinesisVideoFrameTransportCallback] dr-kvs-372026249783-20220524073455-02fb11a4-b977-4793-9e71-a6f2a9bcba80 PutFrame failed. Error code: 4102[0m
+Checkpoint> Restoring from path=./checkpoint_robomaker/agent/1_Step-0.ckpt
+[BestModelSelection] Number of evaluations: 0 Evaluation episode progress: []
+[BestModelSelection] Evaluation episode progress mean: None
+[BestModelSelection] current progress mean: None >= best progress mean: None
+[BestModelSelection] Updating the best checkpoint to "1_Step-0.ckpt" from "None".
+[s3] Successfully uploaded deepracer checkpoint to                  s3 bucket aws-deepracer-data-us-east-1-1 with s3 key data-4babdd08-b561-461f-b89b-0e59c2153d10/models/f4861372-93fe-4ec3-8f43-b845859cdbbf/sagemaker-robomaker-artifacts/model/deepracer_checkpoints.json.
+Reset agent
+Reset agent finished
+SIM_TRACE_LOG:0,1,3.1999,0.6831,0.1827,-5.42,0.74,[-5.41723537  0.7383489 ],0.0000,False,True,0.7914,1,17.71,30.004,prepare,0.00
+{"simapp_exception": {"date": "2022-05-24 07:41:42.335357", "function": "deepracer_exceptions.py::log_except_and_exit::30", "message": "Reward function error: Reward function exception unsupported operand type(s) for ^: 'float' and 'int'", "exceptionType": "simulation_worker.exceptions", "eventType": "user_error", "errorCode": "400"}}
+ERROR: FAULT_CODE: 41
+simapp_exit_gracefully: simapp_exit--1
+Terminating simapp simulation...
+simapp_exit_gracefully - callstack trace=Traceback (callstack)
+  File "/usr/lib/python3.6/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/usr/lib/python3.6/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/opt/amazon/install/sagemaker_rl_agent/lib/python3.6/site-packages/markov/rollout_worker.py", line 509, in <module>
+    main()
+  File "/opt/amazon/install/sagemaker_rl_agent/lib/python3.6/site-packages/markov/rollout_worker.py", line 503, in main
+    unpause_physics=unpause_physics
+  File "/opt/amazon/install/sagemaker_rl_agent/lib/python3.6/site-packages/markov/rollout_worker.py", line 176, in rollout_worker
+    graph_manager.act(act_steps, wait_for_full_episodes=graph_manager.agent_params.algorithm.act_for_full_episodes)
+  File "/opt/amazon/install/sagemaker_rl_agent/lib/python3.6/site-packages/markov/multi_agent_coach/multi_agent_graph_manager.py", line 430, in act
+    done = self.top_level_manager.step(None)
+  File "/opt/amazon/install/sagemaker_rl_agent/lib/python3.6/site-packages/markov/multi_agent_coach/multi_agent_level_manager.py", line 231, in step
+    for action_info in action_infos])
+  File "/opt/amazon/install/sagemaker_rl_agent/lib/python3.6/site-packages/markov/multi_agent_coach/multi_agent_environment.py", line 185, in step
+    self._update_state()
+  File "/opt/amazon/install/sagemaker_rl_agent/lib/python3.6/site-packages/markov/environments/deepracer_racetrack_env.py", line 182, in _update_state
+    err.log_except_and_exit()
+  File "/opt/amazon/install/sagemaker_rl_agent/lib/python3.6/site-packages/markov/log_handler/deepracer_exceptions.py", line 30, in log_except_and_exit
+    SIMAPP_EVENT_ERROR_CODE_400)
+  File "/opt/amazon/install/sagemaker_rl_agent/lib/python3.6/site-packages/markov/log_handler/exception_handler.py", line 74, in log_and_exit
+    s3_crash_status_file_name=s3_crash_status_file_name)
+  File "/opt/amazon/install/sagemaker_rl_agent/lib/python3.6/site-packages/markov/log_handler/exception_handler.py", line 179, in simapp_exit_gracefully
+    callstack_trace = ''.join(traceback.format_stack())
+simapp_exit_gracefully - exception trace=Traceback (most recent call last):
+  File "/opt/amazon/install/sagemaker_rl_agent/lib/python3.6/site-packages/markov/agent_ctrl/rollout_agent_ctrl.py", line 769, in _judge_action_at_run_phase
+    reward = float(self._reward_(copy.deepcopy(self._reward_params_)))
+  File "/root/.ros/custom_files/agent/customer_reward_function.py", line 56, in reward_function
+    reward *= penalization_factor^2
+TypeError: unsupported operand type(s) for ^: 'float' and 'int'
+During handling of the above exception, another exception occurred:
+Traceback (most recent call last):
+  File "/opt/amazon/install/sagemaker_rl_agent/lib/python3.6/site-packages/markov/environments/deepracer_racetrack_env.py", line 156, in _update_state
+    next_state, reward, done = agent.judge_action(action, self._agents_info_map)
+  File "/opt/amazon/install/sagemaker_rl_agent/lib/python3.6/site-packages/markov/agents/agent.py", line 96, in judge_action
+    reward, done, _ = self._ctrl_.judge_action(agents_info_map)
+  File "/opt/amazon/install/sagemaker_rl_agent/lib/python3.6/site-packages/markov/agent_ctrl/rollout_agent_ctrl.py", line 679, in judge_action
+    reward = self._judge_action_at_run_phase(episode_status=episode_status, pause=pause)
+  File "/opt/amazon/install/sagemaker_rl_agent/lib/python3.6/site-packages/markov/agent_ctrl/rollout_agent_ctrl.py", line 771, in _judge_action_at_run_phase
+    raise RewardFunctionError('Reward function exception {}'.format(ex))
+markov.log_handler.deepracer_exceptions.RewardFunctionError: Reward function exception unsupported operand type(s) for ^: 'float' and 'int'
+simapp_exit_gracefully - skipping s3 upload.
+simapp_exit_gracefully - Job type is SageOnly. Killing SimApp and Training jobs by PID
+simapp_exit_gracefully - SimApp pids=[137, 206, 224, 224], Training pids=[58].
+[33m[ WARN] [1653378121.801302763, 49.523000000]: [KinesisVideoFrameTransportCallback] dr-kvs-372026249783-20220524073455-02fb11a4-b977-4793-9e71-a6f2a9bcba80 PutFrame failed. Error code: 4102[0m
